@@ -45,7 +45,7 @@ function setup() {
   ground.x = ground.width /2;
   ground.velocityX = -4;
   
-  invisibleGround = createSprite(width / 2, height - 10, width, 125);
+  invisibleGround = createSprite(width / 2, height - 110, width, 125);
   invisibleGround.visible = false;
 
   obstaclesGroup =  new Group()
