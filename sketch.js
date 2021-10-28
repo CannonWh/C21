@@ -74,10 +74,6 @@ function draw() {
     trex.velocityY = -10;
     touches = []
   }
-  if (touches.length>0||keyDown("mousePressedOver"(restart))) {
-    reset
-    touches = [restart]
-  }
 
 
   trex.velocityY = trex.velocityY + 0.8
