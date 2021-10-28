@@ -35,7 +35,7 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  trex = createSprite(50, height - 70, 20, 50);
+  trex = createSprite(50, height - 600, 20, 50);
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided",trex_collided)
   trex.scale = 0.5;
@@ -45,7 +45,7 @@ function setup() {
   ground.x = ground.width /2;
   ground.velocityX = -4;
   
-  invisibleGround = createSprite(width / 2, height - 110, width, 125);
+  invisibleGround = createSprite(width / 2, height  - 406, width, 125);
   invisibleGround.visible = false;
 
   obstaclesGroup =  new Group()
@@ -74,6 +74,12 @@ function draw() {
     trex.velocityY = -10;
     touches = []
   }
+  if (touches.length>0||keyDown("mousePressedOver"(restart))) {
+    reset
+    touches = [restart]
+  }
+
+
   trex.velocityY = trex.velocityY + 0.8
 
   if (ground.x < 0){
